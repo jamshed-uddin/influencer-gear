@@ -86,6 +86,7 @@ font-size: 16px;
 line-height: 24px;
 }
 
+
 .banner-image{
     background-image: url(images/Circle\ design.svg);
     background-repeat: no-repeat;
@@ -103,8 +104,11 @@ line-height: 24px;
 }
 
 .companies{
-display: grid;
-grid-template-columns: repeat(7, 1fr);
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+/* padding: 5px 0; */
+
 }
 
 /* 
@@ -190,6 +194,10 @@ margin-top: 50px;
     gap: 90px;
 }
 
+.mini-banner-image img{
+    width: 100%;
+}
+
 .mini-banner-text h4{
     font-weight: 700;
 font-size: 38px;
@@ -234,5 +242,58 @@ color: #D9DBE1;
 .footer .fa-brands{
     padding: 15px 10px;
     cursor: pointer;
+}
+
+
+@media  screen and (max-width:576px) {
+ .header{
+    align-items: flex-start;
+ }
+    .navbar{
+    text-align: center;
+    flex-direction: column;
+    width: auto;
+    
+ }
+ .nav-item{
+    text-align: center;
+ }
+ .nav-item ul{
+    text-align: center;
+    gap: 10px;
+ }
+.banner{
+    flex-direction: column-reverse;
+   text-align: center;
+ gap: 30px;
+ width: 90%;
+}
+.banner-image img{
+    width: 257px;
+    height: 237px;
+}
+
+.companies{
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+.collection-container{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 1rem;
+}
+.button{
+
+    margin-right: 30px;
+    
+}
+.mini-banner{
+    flex-direction: column;
+  width: 90%;
+  gap: 30px;
+  margin-top: 50px;
+}
+
 }
 
